@@ -18,7 +18,7 @@ theme: jekyll-theme-so-simple
 skin: "/assets/css/skins/dark.css"
 locale: en-US
 title: "Snap Bioinformatics with Dr. evo"
-description: "Quick solutions to daily bioindormatics problems."
+description: "Quick solutions to daily bioinformatics problems"
 baseurl: /blog # the subpath of your site, e.g. "/blog"
 url: https://ozankiratli.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "/images/logo.png" # path of site logo, e.g. "/images/logo.png"
@@ -112,10 +112,6 @@ author:
 
 # Footer Links
 footer_links:
-  - title: Feed
-    url: atom.xml
-    icon: fas fa-rss-square
-
   - title: Personal Website
     url: https://ozankiratli.github.io
     icon: fa fa-globe
@@ -127,3 +123,7 @@ footer_links:
   - title: LinkedIn
     url: https://www.linkedin.com/in/ozankiratli
     icon: fab fa-linkedin-in
+
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
