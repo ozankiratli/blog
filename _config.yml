@@ -23,17 +23,24 @@ baseurl: /blog # the subpath of your site, e.g. "/blog"
 url: https://ozankiratli.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "/images/logo.png" # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
-read_time: # reading time estimates, e.g. true
+read_time: true # reading time estimates, e.g. true
 words_per_minute: # 200
+markdown: kramdown
+kramdown: 
+  math_engine: mathjax
 mathjax:
   enable: true # MathJax equations, e.g. true, false (default)
   combo:  "tex-svg" # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
-  tags: all # "none", "ams" (default), "all"
+  tags: "ams" # "none", "ams" (default), "all"
 google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
+#  - name: "Source Sans 3"
+#    weights: "400,400i,700,700i"
+#  - name: "Lora"
+#    weights: "400,400i,700,700i"
+#  - name: "Montserrat"
+#    weights: "400,400i,700,700i"
+#  - name: "Menlo"
+#    weights: "400,400i,700,700i"
 google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 disqus:
   shortname: # Disqus shortname, e.g. "my_disqus_shortname"
@@ -46,7 +53,6 @@ liquid:
 
 # Build settings
 permalink: /:categories/:title/
-markdown: kramdown
 feed:
   path: atom.xml
 
@@ -68,13 +74,13 @@ exclude:
 # - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor
+#  - vendor
   - docs
   - example
-#  - vendor/bundle/
-#  - vendor/cache/
-#  - vendor/gems/
-#  - vendor/ruby/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 plugins:
   - jekyll-seo-tag

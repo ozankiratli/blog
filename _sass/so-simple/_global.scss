@@ -27,6 +27,11 @@
   display: none;
   margin-bottom: 1em;
   text-align: center;
+  position: fixed;
+  right: 0;
+  top: 0px;
+  z-index: 3000;
+
 
   ul {
     display: block;
