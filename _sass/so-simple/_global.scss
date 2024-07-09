@@ -53,7 +53,9 @@
   a {
     display: block;
     padding: 0.5em 0.75em;
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    font-family: $serif-font-family;
+    font-style: italic;
     text-decoration: none;
     border: 1px solid;
     border-radius: $border-radius;

@@ -1,6 +1,7 @@
 # Sample site navigation bar links
-
-- title: Home
+- title: <i class="fa fa-home" aria-hidden="true"></i>
+  url: https://ozankiratli.github.io
+- title: Blog
   url: /
 - title: Posts
   url: /posts/

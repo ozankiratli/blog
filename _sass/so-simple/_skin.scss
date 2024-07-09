@@ -9,10 +9,10 @@ body {
 }
 
 a {
-  color: $accent-color;
+  color: $main-color;
 
   &:hover {
-    color: shade($accent-color, 25%);
+    color: shade($accent-color, 0%);
   }
 }
 
@@ -27,7 +27,7 @@ blockquote {
 
 .site-title {
   a {
-    color: $text-color;
+    color: $main-color;
   }
 }
 
@@ -77,7 +77,9 @@ blockquote {
     border-color: $nav-background-color;
 
     &:hover {
-      border-color: $nav-color;
+      color: $accent-color;
+      box-shadow: 0 0 4px $nav-color;
+      transform: scale(1.1);
     }
   }
 }
