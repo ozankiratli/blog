@@ -84,7 +84,7 @@
   text-align: center;
   position: fixed;
   right: 0;
-  top: 30px;
+  top: 0px;
   bottom: 0;
   z-index: 10000;
   height: 100%;
@@ -100,12 +100,14 @@
     padding: 0.25em 0.75em;
     border-radius: 0 0 (2 * $border-radius) (2 * $border-radius);
     flex: 1 1 auto; 
+    justify-content: center;
   }
 
   li {
     display: inline-block;
     font-size: 0.75rem;
-    flex: 1;
+    //flex: 1;
+    //justify-content: center;
   }
 
   a {
