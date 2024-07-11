@@ -71,6 +71,10 @@
   animation-name: fadeInDown;
 }
 
+
+
+
+
 /*
    Drop animation .drop
    ========================================================================== */
@@ -96,4 +100,63 @@
 .drop {
   -webkit-animation-name: drop;
   animation-name: drop;
+}
+
+
+
+@-webkit-keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInSlideDown {
+  -webkit-animation-name: fadeInSlideDown;
+  animation-name: fadeInSlideDown;
+}
+
+
+@-webkit-keyframes fadeInSlideUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+}
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+.fadeInSlideUp {
+  -webkit-animation-name: fadeInSlideUp;
+  animation-name: fadeInSlideUp;
 }

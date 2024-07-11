@@ -152,6 +152,43 @@ blockquote {
   border-color: $border-color;
 }
 
+
+/* ==========================================================================
+   Preloader
+   ========================================================================== */
+
+$leaf-green: #3cb371;
+$terminal-green: #00ff66;
+$main-blue: #60c0ff;
+$dodger-blue: #1e90ff;
+
+$preloader-square1: $leaf-green;
+$preloader-square2: $main-blue;
+$preloader-square3: $terminal-green;
+$preloader-square4: $dodger-blue;
+
+   #preloader {
+    background: $background-color;
+  
+    .load :first-child {
+      background: $preloader-square1;
+    }
+  
+    .load :nth-child(2) {
+      background: $preloader-square2;
+    }
+  
+    .load :nth-child(3) {
+      background: $preloader-square3;
+    }
+  
+    .load :last-child {
+      background: $preloader-square4;
+    }
+  
+  }
+  
+
 /* ==========================================================================
    Page
    ========================================================================== */

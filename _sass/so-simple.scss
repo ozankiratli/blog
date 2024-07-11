@@ -27,6 +27,15 @@
 @import "so-simple/icons";
 @import "so-simple/notices";
 @import "so-simple/syntax-highlighting";
+@import "so-simple/preloader";
 
 /* Utility Clases */
 @import "so-simple/utilities";
+
+
+:root {
+    --breakpoint-small: $small;  
+    --breakpoint-medium: $medium;  
+    --breakpoint-large: $large;  
+    --breakpoint-xlarge: $xlarge; 
+}
