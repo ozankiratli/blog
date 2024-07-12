@@ -12,19 +12,14 @@
 
 #menu-toggle {
   display: block;
-  font-family: $header-font-family;
+  position: fixed;
+  cursor: pointer;
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  text-align: center;
-  position: absolute;
-  display: block;
-  width: 100%;
-  pointer-events: all;
-  top: 0rem;
-  left: 0rem;
+  top: 0;
+  left: 0;
   height: 35px;
-  cursor: pointer;
+  width: 100%;
   z-index: 11000;
   box-sizing: border-box;
   @include breakpoint($medium) {
@@ -43,8 +38,7 @@
   transform: translateX(-50%);
   width:30px;
   height: 3px;
-  background-color: #bbb;
-  transition: transform .5s ease, top 0.5s ease, background 0.5s ease;
+  transition: transform .3s ease, top 0.3s ease, background-color 0.3s ease;
   border-radius: 4px;
 }
 
@@ -63,33 +57,27 @@
 }
 
 #menu-toggle.active>span::before {
-  content: '';
-  position: absolute;
-  height: 3px;
   top: 0;
   transform: translateX(-15px) rotate(45deg);
 }
 
 #menu-toggle.active>span::after {
-  content: '';
-  position: absolute;
-  height: 3px;
   top: 0;
   transform: translateX(-15px) rotate(-45deg);
 }
 
 .site-nav {
   display: none;
-  margin-bottom: 1em;
-  text-align: center;
   position: fixed;
   right: 0;
   top: 0px;
   bottom: 0;
   z-index: 10000;
   height: 100%;
+  line-height: 1rem;
   width: 100%;
-  align-items: stretch;
+  overflow-y: auto; 
+ 
 
   ul {
     display: flex;
@@ -98,16 +86,15 @@
     width: 100%;
     margin: 0;
     padding: 0.25em 0.75em;
-    border-radius: 0 0 (2 * $border-radius) (2 * $border-radius);
-    flex: 1 1 auto; 
+    flex:  auto; 
     justify-content: center;
+    align-items: center;
   }
 
   li {
     display: inline-block;
     font-size: 0.75rem;
-    //flex: 1;
-    //justify-content: center;
+    text-align: center;
   }
 
   a {
@@ -116,8 +103,8 @@
     font-size: x-large;
     font-family: $serif-font-family;
     font-style: italic;
+    font-weight: 600;
     text-decoration: none;
-    border: 1px solid;
     border-radius: $border-radius;
     width: 100%;
   }
@@ -125,21 +112,20 @@
   &.js-menu-is-open {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    -webkit-animation-name: fadeInSlideDown;
-    animation-name: fadeInSlideDown;
+    align-items: center;
   }
 }
 
 @media (min-width: 768px) {
-  .site-nav{ // Adjust to your 'medium' breakpoint
-    display: flex; // Always show the nav on medium and larger screens
-    flex-direction: row; // Ensures the menu is in a row
-    top: 0; // Adjust if necessary to fit your site's design
+  .site-nav{ 
+    display: flex; 
+    flex-direction: row; 
+    top: 0; 
     right: 0;
-    width: auto; // Full width for larger screens
-    height: auto; // Ensures the menu does not expand to full height   
+    width: auto; 
+    height: auto;  
   
     opacity: 1;  
     visibility: visible;

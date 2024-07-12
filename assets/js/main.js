@@ -10,13 +10,19 @@ window.addEventListener('load', function() {
 });
 
 window.addEventListener('resize', function() {
+  var toggleButton = document.getElementById("menu-toggle"); 
   var menu = document.getElementById("primary-nav");
-  if (window.innerWidth >= breakpoints.medium) {
-    menu.style.display = 'flex'; // Ensure the menu is always visible
-  } else {
-    menu.style.display = 'none'; // Optional: Hide the menu when below medium size
-    menu.classList.remove("js-menu-is-open"); // Reset toggle state
-  }
+  const breakpointMedium = 768; 
+  if (window.innerWidth >= breakpointMedium) { 
+    menu.style.display = 'flex'; 
+    menu.classList.add("js-menu-is-open"); 
+    toggleButton.classList.remove("active"); 
+  } else { 
+    if (!menu.classList.contains("js-menu-is-open")) { 
+      menu.style.display = 'none'; 
+    } 
+    toggleButton.classList.remove("active"); 
+  } 
 });
 
 function fadeOutPreloader(element, duration) {
@@ -43,9 +49,9 @@ function fadeOutPreloader(element, duration) {
   }, duration);
 }
 
-const breakpoints = {
-  medium: 768,  // Adjust this value to match your CSS breakpoint for medium screens
-};
+//const breakpoints = {
+//  medium: 768,  // Adjust this value to match your CSS breakpoint for medium screens
+//};
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -57,43 +63,47 @@ document.addEventListener('DOMContentLoaded', function() {
   const breakpointMedium = 768;
   //parseInt(rootStyle.getPropertyValue('--breakpoint-medium'), 10);
   
-  // Function to manage menu visibility based on window width
   function manageMenuDisplay() {
     if (window.innerWidth >= breakpointMedium) {
-      menu.style.display = 'flex'; // Always show the nav on medium and larger screens
-      menu.classList.add("js-menu-is-open"); // Ensure it's always considered 'open' in desktop mode
-      menu.style.height = 'auto'; // Only necessary height
-      toggleButton.classList.remove("active"); // Ensure toggle button is not in active state
+      menu.style.display = 'flex'; 
+      menu.classList.add("js-menu-is-open"); 
+      menu.style.height = 'auto'; 
+      toggleButton.classList.remove("active"); 
     } else {
-      menu.style.display = menu.classList.contains("js-menu-is-open") ? 'flex' : 'none';
+      menu.style.display = 'none'; //
+      menu.classList.remove("js-menu-is-open"); //
+      toggleButton.classList.remove("active"); //
     }
   }
 
-
-function toggleMenu() {
+  function toggleMenu() {
     if (window.innerWidth < breakpointMedium) {
+      menu.classList.toggle("js-menu-is-open");
       if (menu.classList.contains("js-menu-is-open")) {
-        menu.style.animation = 'fadeInSlideUp 0.5s ease forwards';
-        menu.addEventListener('animationend', function handler() {
-          menu.classList.remove("js-menu-is-open");
-          menu.style.display = 'none';
-          menu.style.removeProperty('animation'); // Remove the animation to avoid affecting subsequent toggles
-          menu.removeEventListener('animationend', handler); // Clean up the event listener
-          toggleButton.classList.toggle("active");
-        });
-      } else {
-        menu.style.display = 'flex'; // Show the menu before starting animation
-        menu.classList.add("js-menu-is-open");
+        toggleButton.classList.add("active"); //
+        menu.style.display = 'flex'; //
         menu.style.animation = 'fadeInSlideDown 0.5s ease forwards';
-        toggleButton.classList.toggle("active");
+      } else {
+        toggleButton.classList.remove("active"); //
+        menu.style.animation = 'fadeInSlideUp 0.5s ease forwards';
+        
+        menu.addEventListener('animationend', function handler() { //
+          if (!menu.classList.contains("js-menu-is-open")) { //
+            menu.style.display = 'none'; //
+          } //
+          menu.style.removeProperty('animation'); //
+          menu.removeEventListener('animationend', handler); //
+        }); //
       }
     }
   }
+
   toggleButton.addEventListener("click", toggleMenu);
   window.addEventListener('resize', manageMenuDisplay);
+  window.addEventListener('orientationchange', manageMenuDisplay);  //
   manageMenuDisplay();
 
-  $("a").smoothScroll({ offset: -20 });
+  $("a").smoothScroll();
 
   $("a[href$='.jpg'], a[href$='.png'], a[href$='.gif']").attr("data-lity", "");
 });

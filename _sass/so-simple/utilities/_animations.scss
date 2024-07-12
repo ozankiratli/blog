@@ -81,7 +81,7 @@
 
 @-webkit-keyframes drop {
   0% {
-    -webkit-transform: translateY(-500px);
+    -webkit-transform: translateY(-60px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -89,8 +89,8 @@
 }
 @keyframes drop {
   0% {
-    -webkit-transform: translateY(-500px);
-    transform: translateY(-500px);
+    -webkit-transform: translateY(-60px);
+    transform: translateY(-60px);
   }
   100% {
     -webkit-transform: translateY(0);

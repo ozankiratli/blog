@@ -66,6 +66,12 @@ blockquote {
   color: lighten($text-color, 50%);
 }
 
+#menu-toggle>span,
+#menu-toggle>span::before,
+#menu-toggle>span::after {
+  background-color: $nav-color;
+}
+
 .site-nav {
   ul {
     color: $nav-color;
