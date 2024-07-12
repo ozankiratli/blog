@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   toggleButton.addEventListener("click", toggleMenu);
+  menu.addEventListener("click",toggleMenu);
   window.addEventListener('resize', manageMenuDisplay);
   window.addEventListener('orientationchange', manageMenuDisplay);  //
   manageMenuDisplay();
