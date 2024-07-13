@@ -20,7 +20,7 @@
   left: 0;
   height: 50px;
   width: 100%;
-  z-index: 11000;
+  z-index: 4020;
   box-sizing: border-box;
   @include breakpoint($medium) {
     display:none;
@@ -30,6 +30,7 @@
 #menu-toggle>span,
 #menu-toggle>span::before,
 #menu-toggle>span::after {
+  content: '';
   display: block;
   position: absolute;
   align-items: center;
@@ -38,17 +39,15 @@
   transform: translateX(-50%);
   width:40px;
   height: 5px;
-  transition: transform .3s ease, top 0.3s ease, background-color 0.3s ease;
+  transition: transform .5s ease, top 0.5s ease, background-color 0.5s ease;
   border-radius: 4px;
 }
 
 #menu-toggle>span::before {
-  content: '';
   top: -10px;
 }
 
 #menu-toggle>span::after {
-  content: '';
   top: 10px;
 }
 
@@ -69,13 +68,13 @@
 .site-nav {
   display: none;
   position: fixed;
+  top: 0;
   right: 0;
-  top: 0px;
   bottom: 0;
-  z-index: 10000;
-  height: 100%;
-  line-height: 1rem;
   width: 100%;
+  height: 100%;
+  z-index: 4010;
+  line-height: 1rem;
   overflow-y: auto; 
  
 
@@ -100,12 +99,13 @@
   a {
     display: block;
     padding: 0.75em;
-    font-size: x-large;
     font-family: $serif-font-family;
+    font-size: x-large;
     font-style: italic;
     font-weight: 600;
     text-decoration: none;
     border-radius: $border-radius;
+    transition-duration: .25s;
     width: 100%;
   }
 

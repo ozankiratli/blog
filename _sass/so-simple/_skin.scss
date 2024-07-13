@@ -66,6 +66,12 @@ blockquote {
   color: lighten($text-color, 50%);
 }
 
+#menu-toggle {
+  color: $nav-color;
+  background-color: $lightblue-transparent;
+  box-shadow: $menu-button-box-shadow;
+}
+
 #menu-toggle>span,
 #menu-toggle>span::before,
 #menu-toggle>span::after {
@@ -76,6 +82,7 @@ blockquote {
   ul {
     color: $nav-color;
     background-color: $nav-background-color;
+    box-shadow: $nav-box-shadow;
   }
 
   a {
@@ -122,14 +129,6 @@ blockquote {
       }
     }
   }
-}
-
-#menu-toggle {
-  color: $nav-color;
-}
-
-#menu-toggle {
-  background-color: $nav-background-color;
 }
 
 #markdown-toc {

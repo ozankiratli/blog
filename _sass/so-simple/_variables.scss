@@ -8,6 +8,13 @@ $medium: 768px !default;
 $large: 1024px !default;
 $xlarge: 1280px !default;
 
+:root {
+    --breakpoint-small: #($small);  
+    --breakpoint-medium: #($medium);  
+    --breakpoint-large: #($large);  
+    --breakpoint-xlarge: #($xlarge); 
+}
+
 /* Fluid type */
 $base-font-size: 16px !default;
 $min-vw: $small !default;
@@ -98,3 +105,4 @@ $border-radius: 0.25rem !default;
 
 /* Global transition */
 $global-transition: all 0.4s ease !default;
+

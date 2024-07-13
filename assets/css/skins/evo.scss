@@ -6,27 +6,9 @@
 @import "so-simple/functions";
 @import "so-simple/variables";
 @import "so-simple/notices";
+@import "so-simple/colors";
 
 /* Colors */
-$leaf-green: #3cb371;
-$terminal-green: #00ff66;
-$greenblue: #4fe0b7;
-$main-blue: #60c0ff;
-$dodger-blue: #1e90ff;
-$darkblue: rgba(37,42,52,1);
-$darkblue-transparent: rgba(27,30,38,0.4);
-$darkblue-lesstransparent: rgba(27,30,38,0.95);
-$darkblue-moretransparent: rgba(54,61,76,0.15);
-$grayblue-transparent: rgba(72,82,102,0.15);
-$grayblue: rgba(72,82,102,1);
-$lightblue: rgba(108,123,153,1);
-$lighterblue: rgba(144,164,204,1);
-$lightblue-transparent: rgba(108,123,153,0.4);
-$lightblue-moretransparent: rgba(108,123,153,0.2);
-$black: #000;
-$black-transparent: rgba(0, 0, 0, 0.5);
-
-
 $base-color: #eaeaea !default;
 $text-color: #eaeaea !default;
 $accent-color: #3cb371 !default;

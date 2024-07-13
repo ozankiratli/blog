@@ -9,21 +9,6 @@ window.addEventListener('load', function() {
     }, 500);   
 });
 
-window.addEventListener('resize', function() {
-  var toggleButton = document.getElementById("menu-toggle"); 
-  var menu = document.getElementById("primary-nav");
-  const breakpointMedium = 768; 
-  if (window.innerWidth >= breakpointMedium) { 
-    menu.style.display = 'flex'; 
-    menu.classList.add("js-menu-is-open"); 
-    toggleButton.classList.remove("active"); 
-  } else { 
-    if (!menu.classList.contains("js-menu-is-open")) { 
-      menu.style.display = 'none'; 
-    } 
-    toggleButton.classList.remove("active"); 
-  } 
-});
 
 function fadeOutPreloader(element, duration) {
   opacity = 1;
@@ -49,22 +34,32 @@ function fadeOutPreloader(element, duration) {
   }, duration);
 }
 
-//const breakpoints = {
-//  medium: 768,  // Adjust this value to match your CSS breakpoint for medium screens
-//};
+const breakpoints = {
+  medium: 768,  
+};
 
+window.addEventListener('resize', function() {
+  var toggleButton = document.getElementById("menu-toggle"); 
+  var menu = document.getElementById("primary-nav");
+
+  if (window.innerWidth >= breakpoints.medium) { 
+    menu.style.display = 'flex'; 
+    menu.classList.add("js-menu-is-open"); 
+    toggleButton.classList.remove("active"); 
+  } else { 
+    if (!menu.classList.contains("js-menu-is-open")) { 
+      menu.style.display = 'none'; 
+    } 
+    toggleButton.classList.remove("active"); 
+  } 
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   var toggleButton = document.getElementById("menu-toggle");
   var menu = document.getElementById("primary-nav");
-
-  // Retrieve the CSS custom property for the medium breakpoint
-  //const rootStyle = getComputedStyle(document.documentElement);
-  const breakpointMedium = 768;
-  //parseInt(rootStyle.getPropertyValue('--breakpoint-medium'), 10);
   
   function manageMenuDisplay() {
-    if (window.innerWidth >= breakpointMedium) {
+    if (window.innerWidth >= breakpoints.medium) {
       menu.style.display = 'flex'; 
       menu.classList.add("js-menu-is-open"); 
       menu.style.height = 'auto'; 
@@ -77,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function toggleMenu() {
-    if (window.innerWidth < breakpointMedium) {
+    if (window.innerWidth < breakpoints.medium) {
       menu.classList.toggle("js-menu-is-open");
       if (menu.classList.contains("js-menu-is-open")) {
         toggleButton.classList.add("active"); //
