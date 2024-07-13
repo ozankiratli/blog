@@ -9,10 +9,10 @@ $large: 1024px !default;
 $xlarge: 1280px !default;
 
 :root {
-    --breakpoint-small: #($small);  
-    --breakpoint-medium: #($medium);  
-    --breakpoint-large: #($large);  
-    --breakpoint-xlarge: #($xlarge); 
+    --breakpoint-small: #{$small};  
+    --breakpoint-medium: #{$medium};  
+    --breakpoint-large: #{$large};  
+    --breakpoint-xlarge: #{$xlarge}; 
 }
 
 /* Fluid type */

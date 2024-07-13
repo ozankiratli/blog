@@ -125,7 +125,9 @@
     top: 0; 
     right: 0;
     width: auto; 
-    height: auto;  
+    height: 40px;
+    pointer-events: none;
+    
   
     opacity: 1;  
     visibility: visible;
@@ -135,6 +137,7 @@
       justify-content: center;
       align-items: center;
       flex: none;
+      pointer-events: all;
     }
 
     li {

@@ -18,12 +18,25 @@
     {% if site.copyright %}
       {{ site.copyright | markdownify }}
     {% else %}
-    <p>
-        &copy; 2024 Design and mobile improvements by 
+      <p>
+        &copy; {{ site.time | date: '%Y' }} 
+        <i>{{ site.name | default: site.title }}</i>
+        </br>
+        Built with 
+        <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> 
+        and Powered by 
+        <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>
+        &amp;
+        <a class="highlight-link" href="https://pages.github.com/" target="_blank" rel="noreferrer">Github Pages</a>.
+      </p>
+      <!--
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+  -->
+      <p>
+        Design, interactivity, and mobile improvements by 
         <a href="https://ozankiratli.github.io" target="_blank">Ozan Kiratli</a> and 
         <a href="https://www.openai.com/chatgpt" target="_blank">ChatGPT</a>.
-    </p>
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+      </p>
     {% endif %}
   </div>
 </footer>

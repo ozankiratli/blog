@@ -34,8 +34,17 @@ function fadeOutPreloader(element, duration) {
   }, duration);
 }
 
+  const root = getComputedStyle(document.documentElement);
+  const smallScreen = parseInt(root.getPropertyValue('--breakpoint-small'), 10);
+  const mediumScreen = parseInt(root.getPropertyValue('--breakpoint-medium'), 10);
+  const largeScreen = parseInt(root.getPropertyValue('--breakpoint-large'), 10);
+  const xlargeScreen = parseInt(root.getPropertyValue('--breakpoint-xlarge'), 10);
+
 const breakpoints = {
-  medium: 768,  
+  small: smallScreen,
+  medium: mediumScreen,
+  large: largeScreen,
+  xlarge: xlargeScreen,  
 };
 
 window.addEventListener('resize', function() {
