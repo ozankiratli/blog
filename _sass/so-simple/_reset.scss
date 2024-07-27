@@ -13,7 +13,7 @@ html {
   font-family: $base-font-family; /* 1 */
   box-sizing: border-box;
   -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  //-webkit-text-size-adjust: 100%; /* 2 */
 }
 
 *,
@@ -285,7 +285,7 @@ audio:not([controls]) {
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
   max-width: 100%; /* part 1: Set a maximum relative to the parent*/
-  width: auto\9; /* IE7-8 need help adjusting responsive images*/
+  //width: auto\9; /* IE7-8 need help adjusting responsive images*/
   height: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/
 
   border-style: none; /* Remove the border on images inside links in IE 10-.*/
@@ -352,6 +352,7 @@ html [type="button"], /* 1 */
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; /* 2 */
+  appearance: button;
 }
 
 /**
@@ -449,6 +450,7 @@ textarea {
 [type="search"] {
   outline-offset: -2px; /* 2 */
   -webkit-appearance: textfield; /* 1 */
+  appearance: textfield;
 }
 
 /**

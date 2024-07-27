@@ -14,8 +14,8 @@
   background: rgba(0, 0, 0, .9);
   outline: none !important;
   opacity: 0;
-  -webkit-transition: opacity .3s ease;
-  -o-transition: opacity .3s ease;
+  //-webkit-transition: opacity .3s ease;
+  //-o-transition: opacity .3s ease;
   transition: opacity .3s ease;
 }
 
@@ -28,8 +28,8 @@
 }
 
 .lity * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  //-webkit-box-sizing: border-box;
+  //-moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -61,7 +61,8 @@
   width: 100%;
   text-align: center;
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  //font-family: sans-serif, Arial, Helvetica;
+  font-family: "Source Sans Pro", sans-serif;
   opacity: 0;
   -webkit-transition: opacity .3s ease;
   -o-transition: opacity .3s ease;
@@ -131,6 +132,7 @@
   right: 0;
   top: 0;
   -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
@@ -138,7 +140,8 @@
   color: #fff;
   font-style: normal;
   font-size: 35px;
-  font-family: Arial, Baskerville, monospace;
+  // font-family: Arial, Baskerville, monospace;
+  font-family: Hack, monospace;
   line-height: 35px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
   border: 0;
@@ -163,7 +166,8 @@
   color: #fff;
   font-style: normal;
   font-size: 35px;
-  font-family: Arial, Baskerville, monospace;
+  font-family: Hack, monospace;
+  //font-family: Arial, Baskerville, monospace;
   line-height: 35px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
   border: 0;
